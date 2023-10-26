@@ -7,6 +7,7 @@ import 'package:theme_localization_project/components/widgets/CustomContainer.da
 import 'package:theme_localization_project/components/widgets/textTitle.dart';
 import 'package:theme_localization_project/core/controllers/LocalizationController.dart';
 import 'package:theme_localization_project/core/controllers/ThemeController.dart';
+import 'package:theme_localization_project/core/controllers/connectionController.dart';
 
 class HomePage extends StatelessWidget {
    HomePage({super.key});
@@ -17,6 +18,7 @@ class HomePage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title:
+            //Text('1'.tr, style: const TextStyle(color: Colors.black87)),
             Text('1'.tr, style: Theme.of(context).textTheme.displayMedium),
       ),
       body: Padding(
@@ -37,9 +39,6 @@ class HomePage extends StatelessWidget {
                     ChangeTheme().darkMode(),
                   ],
                 ),
-                SizedBox(
-                  height: 50.h,
-                ),
                 CustomContainer(widget:Obx(()=>themeController.isDark.value? Text("6".tr): Text("7".tr))),
                 SizedBox(
                   height: 50.h,
@@ -55,10 +54,12 @@ class HomePage extends StatelessWidget {
                     ChangeLanguage(language: "en",nameOfLanhuage: "3".tr).english()
                   ],
                 ),
-                 SizedBox(
+                CustomContainer(widget:Obx(() => localController.language == "arabic"? Text("2".tr): Text("3".tr))),
+                SizedBox(
                   height: 50.h,
                 ),
-                CustomContainer(widget:Obx(() => localController.language == "arabic"? Text("2".tr): Text("3".tr))),
+                TextTile(text: "8".tr,),
+                CustomContainer(widget:Obx(() => NetworkController.instance.connectionStatus.value==1 || NetworkController.instance.connectionStatus.value==2? Text("9".tr): Text("10".tr)))
               ],
             )),
       ),

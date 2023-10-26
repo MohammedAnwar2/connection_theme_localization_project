@@ -17,6 +17,9 @@ Map<String, String> ar = {
   "5": "غير لغة الجوال",
   "6": "الوضع الداكن",
   "7": "الوضع المشرق",
+  "8": "حالة الاتصال بالانترنت",
+  "9": "متصل",
+  "10": "غير متصل",
 };
 
 Map<String, String> en = {
@@ -27,4 +30,7 @@ Map<String, String> en = {
   "5": "Change The Language Of App",
   "6": "Dark Theme",
   "7": "Light Theme",
+  "8": "Internet Status",
+  "9": "Connected",
+  "10": "Not Connected",
 };

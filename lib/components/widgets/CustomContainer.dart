@@ -7,11 +7,15 @@ class CustomContainer extends StatelessWidget {
   Widget widget;
   @override
   Widget build(BuildContext context) {
-    return  Container(
-        alignment: Alignment.center,
-        height: 50.h,
-        width: 100.w,
-        color: Theme.of(context).colorScheme.primary,
-        child: widget);
+    return  Padding(
+      padding:EdgeInsetsDirectional.only(top: 30.h),
+      child: Container(
+
+          alignment: Alignment.center,
+          height: 50.h,
+          width: 100.w,
+          color: Theme.of(context).colorScheme.primary,
+          child: widget),
+    );
   }
 }

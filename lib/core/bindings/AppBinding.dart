@@ -1,6 +1,7 @@
 import 'package:get/get.dart';
 import 'package:theme_localization_project/core/controllers/LocalizationController.dart';
 import 'package:theme_localization_project/core/controllers/ThemeController.dart';
+import 'package:theme_localization_project/core/controllers/connectionController.dart';
 import 'package:theme_localization_project/core/services/StorageServices.dart';
 
 class HomeBinding extends Bindings {
@@ -9,5 +10,6 @@ class HomeBinding extends Bindings {
     Get.lazyPut(()=> SettingServices());
     Get.lazyPut(()=> ThemeController());
     Get.lazyPut(()=> MyLanguageController());
+    Get.lazyPut(()=> NetworkController());
   }
 }

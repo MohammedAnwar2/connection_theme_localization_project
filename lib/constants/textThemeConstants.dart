@@ -15,7 +15,6 @@ class AppTextTheme {
     displayMedium: AppTextStyleDarkMode().B,
     displaySmall: AppTextStyleDarkMode().C,
   );
-
 }
 
 class AppTextStyleLightMode{
