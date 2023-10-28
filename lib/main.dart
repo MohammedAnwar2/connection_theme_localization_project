@@ -7,7 +7,7 @@ import 'package:theme_localization_project/core/bindings/AppBinding.dart';
 import 'package:theme_localization_project/core/controllers/LocalizationController.dart';
 import 'package:theme_localization_project/core/controllers/ThemeController.dart';
 import 'package:theme_localization_project/core/services/StorageServices.dart';
-import 'package:theme_localization_project/models/TranslationModel.dart';
+import 'package:theme_localization_project/models/Translation/Languages.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -18,7 +18,7 @@ void main() async {
 class MyApp extends StatelessWidget {
   MyApp({Key? key}) : super(key: key);
   final themeController = Get.find<ThemeController>();
-  MyLanguageController loacal = Get.find();
+  final loacal = Get.find<MyLanguageController>();
   @override
   Widget build(BuildContext context) {
     return ScreenUtilInit(
@@ -29,8 +29,9 @@ class MyApp extends StatelessWidget {
         return GetMaterialApp(
           debugShowCheckedModeBanner: false,
           home: child,
-          theme: Themes.lightTheme,
-          darkTheme: Themes.darkTheme ,
+          //theme: appTheme,
+         theme: Themes.lightTheme,
+         darkTheme: Themes.darkTheme ,
           themeMode: themeController.theme,
           initialRoute: "/",
           locale:loacal.local ,

@@ -5,6 +5,6 @@ class TextTile extends StatelessWidget {
   final String text;
   @override
   Widget build(BuildContext context) {
-    return Text(text,style: Theme.of(context).textTheme.displayLarge);
+    return Text(text,style: Theme.of(context).textTheme.displayMedium);
   }
 }

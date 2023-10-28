@@ -8,7 +8,7 @@ class HomeBinding extends Bindings {
   @override
   void dependencies() {
     Get.lazyPut(()=> SettingServices());
-    Get.lazyPut(()=> ThemeController());
+    Get.lazyPut(()=> ThemeController(),fenix: true);
     Get.lazyPut(()=> MyLanguageController());
     Get.lazyPut(()=> NetworkController());
   }

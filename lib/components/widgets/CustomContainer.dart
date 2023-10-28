@@ -15,6 +15,7 @@ class CustomContainer extends StatelessWidget {
           height: 50.h,
           width: 100.w,
           color: Theme.of(context).colorScheme.primary,
+          //color: Colors.blue,
           child: widget),
     );
   }
