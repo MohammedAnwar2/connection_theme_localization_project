@@ -15,7 +15,7 @@ class DarkThemeButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ElevatedButton(onPressed: () {
-        themeController.changeTheme(Themes.darkTheme);
+        themeController.changeTheme(Themes().darkTheme);
         themeController.changeThemeMode(ThemeMode.dark);
         themeController.saveTheme(true);
         themeController.isDark.value=true;
@@ -30,7 +30,7 @@ class LightThemeButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ElevatedButton(onPressed: () {
-        themeController.changeTheme(Themes.lightTheme);
+        themeController.changeTheme(Themes().lightTheme);
         themeController.changeThemeMode(ThemeMode.light);
         themeController.saveTheme(false);
         themeController.isDark.value=false;
