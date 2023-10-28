@@ -1,4 +1,3 @@
-
 Map<String, String> en = {
   "1": "Home Page",
   "2": "Arabic",
